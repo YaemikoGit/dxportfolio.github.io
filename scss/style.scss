@@ -1,0 +1,636 @@
+@import 'config';
+@import 'button';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-stack;
+    line-height: 1.6;
+    color: $dark-color;
+    background-color: #fffbf6;
+    
+}
+
+/* .wrapper {
+    margin-right: auto;
+    margin-left:  auto;
+    max-width: 960px;
+    padding-right: 10px;
+    padding-left:  10px;
+} */
+
+header {
+    height:auto;
+    padding-bottom: 30px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 8px 16px;
+}
+
+nav li {
+    padding: 0 15px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #333344;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+
+header {
+    border-bottom: solid #333344 1px;
+}
+
+.intro {
+    padding-top: 30px;
+}
+
+.about {
+    background-color: #333344;
+    margin-top: 70px;
+}
+
+
+.inner-wrapper  {
+    padding: 0 150px;
+    
+}
+
+.media {
+    background-color: #ececec;
+}
+
+.workBox h4 {
+    color: #333344;
+}
+
+
+footer {
+    height: 130px;
+    background-color: #333344;
+    padding: 24px 0px;
+    border-top: 1px solid black;
+
+}
+
+footer h6, p {
+    color: white;
+    
+}
+
+.footer-info {
+    display: flex;
+}
+
+
+
+
+
+
+
+/// about page /////
+
+.aboutInfo {
+
+    img {
+        width: 40%;
+    }
+}
+
+
+
+
+
+//// contact //////
+.contactInfo {
+    height: 400px;
+
+}
+
+.form-group {
+    input {
+        width: 480px;
+        height: 45px;
+        background-color: #ececec;
+        margin-bottom: 20px;
+    }
+}
+
+textarea {
+    background-color: #ececec;
+    padding: 5px 10px;
+    border-radius: 0.375rem;
+    border: 1px solid #ced4da;
+}
+
+
+
+.projectBox {
+    background-color: #ececec;
+}
+
+
+
+
+//// sentosa ////
+.moreInfo {
+    margin-top: 100px;
+}
+
+.boxSpacing {
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+
+
+///Media screen /////
+
+@media screen and (max-width: 576px) {
+
+    .inner-wrapper {
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    ul {
+        text-align: center;
+    }
+
+    .btn-primary {
+        padding: 4px 18px;
+        font-size: 12px;
+    }
+
+    .profile {
+        width: 90%;
+        box-shadow: none;
+        margin: 0 15px;
+    }
+
+    .media {
+        text-align: center;
+        padding: 8px 5px;
+    }
+
+    .media img {
+        max-width: 90%;
+        margin: 10px 15px;
+
+    }
+
+    .text-box {
+        padding-right: 0px;
+        margin-top: 20px;
+    }
+
+    .about {
+        margin-top: 30px;
+        padding: 20px 5px;
+    }
+
+    .aboutInfo img {
+        width: 90%;
+        box-shadow: none;
+        margin: 20px 15px;
+    }
+
+    .aboutInfo2 {
+        display: block;
+    }
+
+    .social-media {
+
+        justify-content: start;
+
+        img {
+            width: 15%;
+            height: 15%;
+            margin: 20px 10px 20px 0px;
+        }
+    }
+
+    footer {
+        height: 280px;
+
+        .social-footer {
+
+            justify-content: center;
+
+            img {
+                width: 15%;
+                height: 85%;
+            }
+        }
+    }
+    
+    .footerBox {
+        text-align: center;
+        padding-bottom: 20px;  
+             
+    }
+
+    .footerBox2 {
+        justify-content: center;
+    }
+
+    .contactInfo {
+        height: 300px;
+        margin-bottom: 40px;
+    }
+
+    .social-contact {
+        img {
+            width: 15%;
+            height: 20%;
+            margin: 0px 10px 20px 0px;
+        }
+    }
+
+    .form-group {
+        input {
+            width: 280px;
+            height: 35px;
+            font-size: 12px;
+        }
+    }
+
+    textarea {
+        width: 280px;
+        height: 140px;
+        font-size: 12px;
+    }
+
+    .projectBox {
+        
+        padding: 10px 10px;
+        margin: 0px 8px;
+
+        img {
+            width: 95%;
+            height: 95%;
+            margin: 0px 8px;
+        }
+    }
+
+    .moreInfo {
+
+        margin-top: 50px;
+
+        img {
+            width: 90%;
+            height: 90%;
+            box-shadow: 3px 3px 15px 3px #999999;
+            margin: 0 10px;
+        }
+
+        p {
+            margin-top: 20px;
+            padding: 0 20px;
+        }
+    }
+
+    .boxSpacing {
+        margin-top: 20px;
+        margin-bottom: 80px;
+    }
+
+    .wireframe {
+        padding-top: 20px;
+        padding-right: 8px;
+        padding-left: 5px;
+        
+    }
+
+    .drinkFull {
+        img{
+            box-shadow: 3px 3px 15px 5px #999999;
+        }
+    }
+
+    .drink-tablet1 {
+        img{
+            height: 75%;
+        }
+    }
+
+    .drink-mobile1 {
+        img {
+            height: 80% !important;
+        }
+    }
+
+    .drink-mobile2 {
+
+        p {
+            margin-top: 5px;
+        }
+
+        img {
+            width: 65% !important;
+        }
+    }
+
+    
+
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+    
+    ul {
+        text-align: left;
+    }
+
+    h6 {
+        font-size: 13px;
+    }
+
+    .footerBox {
+
+        margin-right: 20px; 
+
+        p {
+            font-size: 14px;
+        }
+    }
+    
+    .profile {
+        max-width: 90%;
+    }
+    
+    .aboutInfo img {
+        width: 65%;
+        box-shadow: none;
+    }
+
+    .social-media {
+
+        justify-content: center;
+
+        img {
+            width: 10% !important;
+            margin: 20px 10px;
+        }
+    }
+
+    .social-contact {
+        img {
+            margin: 0px 10px 30px 0px;
+        }
+    }
+
+    .aboutInfo {
+        text-align: center;
+    }
+
+    .inner-wrapper {
+        padding: 0 20px;
+    }
+
+    .contactInfo {
+        height: 350px;
+    
+    }
+
+    .form-group {
+        input {
+            width: 655px;
+            height: 45px;
+        }
+    }
+
+    textarea {
+        width: 655px;
+        height: 190px;
+    }
+
+    .moreInfo {
+        img {
+            width: 90%;
+            height: 90%;
+        }
+    }
+
+    .boxSpacing {
+        margin-top: 50px;
+        margin-bottom: 70px;
+    }
+
+    .moreInfo {
+        margin-top: 50px;
+    }
+
+    .drinkFull {
+        img{
+            box-shadow: 3px 3px 15px 10px #999999;
+        }
+    }
+
+    .drink-mobile1 {
+        img {
+            height: 60% !important;
+        }
+    }
+
+    .uob-mobile {
+        img {
+            height: 80% !important;
+            width: 80% !important;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    
+    .social-media {
+
+        justify-content: start;
+
+        img {
+            width: 15% !important;
+            margin: 20px 10px 20px 0px;
+        }
+    }
+
+    .social-contact {
+
+        justify-content: start;
+
+        img {
+            width: 14% !important;
+            margin: 20px 10px 20px 0px;
+        }
+    }
+    
+    .navbar-expand-lg .navbar-collapse {
+        justify-content: flex-end;
+    }
+
+    .media img {
+        max-width: 60%;
+    }
+
+    .media {
+         width: 465px;
+         height: 235px;
+    }
+
+
+    .wireframe {
+    
+        img {
+            width: 90% !important;
+            height: auto !important;
+        }
+    }
+
+
+    .aboutInfo img {
+        width: 50%;
+    }
+
+    .aboutInfo {
+        text-align: left;
+    }
+
+    .contactInfo {
+        height: 400px;
+    
+    }
+
+    .form-group {
+        input {
+            width: 440px;
+            height: 45px;
+        }
+    }
+
+    textarea {
+        width: 440px;
+        height: 210px;
+    }
+
+    .inner-wrapper  {
+        padding: 0 50px;
+        
+    }
+
+    .moreInfo {
+        margin-top: 100px;
+    }
+    
+    .boxSpacing {
+        margin-top: 50px;
+        margin-bottom: 150px;
+    }
+
+    .moreInfo {
+        img {
+            width: 50%;
+            height: 50%;
+        }
+    }
+
+    .drink-mobile2 {
+        img {
+            width: 70% !important;
+        }
+    }
+
+    .uob-mobile {
+        img {
+            height: 80% !important;
+            width: 70% !important;
+        }
+    }
+
+}
+
+
+@media screen and (min-width: 1200px) {
+
+    .inner-wrapper {
+        padding: 0 150px;
+    }
+
+    .media {
+        width: 540px;
+        height: 276px;
+   }
+
+    .wireframe img {
+        width: 90%;
+        height: auto;
+    }
+
+    .sitemap {
+    
+        text-align: center;
+        width: 50% !important; 
+            height: 50% !important;
+
+        img {
+            width: 60%;
+            height: 60%;
+        }
+    }
+
+    .boxSpacing {
+
+        img {
+            width: 50%;
+            height: 50%;
+        }
+    }
+
+    .uob-mobile {
+        img {
+            height: 80% !important;
+            width: 70% !important;
+        }
+    }
+
+    .social-contact {
+
+        justify-content: start;
+
+        img {
+            width: 10% !important;
+            margin: 20px 10px 20px 0px;
+        }
+    }
+
+}

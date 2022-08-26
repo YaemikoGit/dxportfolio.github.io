@@ -1,0 +1,25 @@
+.btn-primary {
+    display: inline-block;
+    border-radius: 18px;
+    border: 1px solid #e04ba0;
+    margin: 3px;
+    margin-top: 10px;
+    padding: 6px 25px;
+    color: white;
+    background-color: #e04ba0;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+
+    &:hover {
+        transform: scale(.98);
+        color: #e04ba0;
+        background-color: white;
+        border: 1px solid #e04ba0;
+    }
+}
+
+

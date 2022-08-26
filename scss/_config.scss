@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+//colors
+
+$font-stack: 'Nunito';
+$dark-color: #333344;
+$light-color: #fffbf6;
+$btn-bg: #e04ba0;
+
+.text-light {
+    color: $light-color;
+}
+
+.text-dark {
+    color: #333344;
+}
+
+.background-light {
+    background-color: #ececec;
+}
+
+hr {
+    width: 55%;
+}
+
+//headers
+
+h1 {
+    font-size: 44px;
+    font-weight: 800;
+}
+
+h3 {
+    font-size: 36px;
+    font-weight: 800;
+}
+
+h4 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h5 {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+
+// Margin & padding classes
+$spaceamonts: (1,2,3,4,5);
+
+@each $space in $spaceamonts {
+    .m-#{$space} {
+        margin: #{$space}rem;
+    }
+    .my-#{$space} {
+        margin: #{$space}rem 0;
+    }
+
+    .ml-#{$space} {
+        margin:0 0 0 #{$space}rem;
+    }
+
+    .mr-#{$space} {
+        margin:0 #{$space}rem 0 0;
+    }
+    
+    .p-#{$space} {
+        padding: #{$space}rem;
+    }
+    .py-#{$space} {
+        padding: #{$space}rem 0;
+    }
+
+    .pl-#{$space} {
+        padding:0 0 0 #{$space}rem;
+    }
+
+    .pr-#{$space} {
+        padding:0 #{$space}rem 0 0;
+    }
+
+    
+}
+
+// image add
+.shadow-right {
+    box-shadow: 10px 10px 3px #999999;
+}
+
+.shadow-left {
+    box-shadow: -10px 10px 3px #999999;
+}
+
+.shadow-box-right {
+    box-shadow:  10px 10px 25px 10px #999999;
+}
+
+.shadow-box-left {
+    box-shadow:  -10px 10px 25px 10px #999999;
+}
+
+
+
+// Set text color based on bg
+//   @function set-text-color($color) {
+//       @if($background-color: #333344) {
+//           @return #fffbf6;
+//       } 
+//       @else {
+//           @return #333344;
+//       }
+//  }
+
+
+//  // Set background & text color
+//  @mixin set-background($color) {
+//      background-color: $color;
+//      color: set-text-color($color);
+// }

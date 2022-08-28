@@ -219,10 +219,19 @@ textarea {
         padding: 20px 5px;
     }
 
-    .aboutInfo img {
-        width: 90%;
-        box-shadow: none;
-        margin: 20px 15px;
+    .aboutInfo {
+
+        padding-bottom: 20px;
+
+        img {
+            width: 90%;
+            box-shadow: none;
+            margin: 20px 15px;
+        }
+
+        a {
+            font-size: 12px;
+        }
     }
 
     .aboutInfo2 {
@@ -480,7 +489,7 @@ textarea {
         justify-content: start;
 
         img {
-            width: 15% !important;
+            width: 14% !important;
             margin: 20px 10px 20px 0px;
         }
     }
@@ -519,7 +528,8 @@ textarea {
 
 
     .aboutInfo img {
-        width: 50%;
+        width: 45%;
+        height: 45%;
     }
 
     .aboutInfo {

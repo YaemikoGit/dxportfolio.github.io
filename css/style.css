@@ -406,10 +406,16 @@ textarea {
     margin-top: 30px;
     padding: 20px 5px;
   }
+  .aboutInfo {
+    padding-bottom: 20px;
+  }
   .aboutInfo img {
     width: 90%;
     box-shadow: none;
     margin: 20px 15px;
+  }
+  .aboutInfo a {
+    font-size: 12px;
   }
   .aboutInfo2 {
     display: block;
@@ -579,7 +585,7 @@ textarea {
     justify-content: start;
   }
   .social-media img {
-    width: 15% !important;
+    width: 14% !important;
     margin: 20px 10px 20px 0px;
   }
   .social-contact {
@@ -604,7 +610,8 @@ textarea {
     height: auto !important;
   }
   .aboutInfo img {
-    width: 50%;
+    width: 45%;
+    height: 45%;
   }
   .aboutInfo {
     text-align: left;

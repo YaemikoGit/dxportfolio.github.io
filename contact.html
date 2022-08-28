@@ -67,16 +67,26 @@
                     </div>
 
                     <div class="col-lg-6 col-md-12">
-                        <form class="ml-lg-3">
+                        <form class="ml-lg-3" action="https://formsubmit.co/dx8153@email.com" method="POST">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Name">
-                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
+                                <!-- Honeypot -->
+                                <input type="text" name="_honey" style="display: none;">
+
+                                <!-- Disable Captcha -->
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_next" value="success.html">
+
+                                <input type="text" class="form-control" name="name" id="name" aria-describedby="nameHelp" placeholder="Name">
+                                <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Email">
                                 
                             </div>
 
                             <textarea name="message" rows="8" cols="50" placeholder="Your message"></textarea>
+                            <div>
+                                <button class="btn-primary" type="submit">Send Over</button>
+                            </div>
                         </form>
-                        <a href="#" class="btn-primary">Send Over</a>
+                        
                     </div>
                 </div>
 

@@ -641,6 +641,12 @@ textarea {
     width: 50%;
     height: 50%;
   }
+
+  /* to note */
+  .moreInfo .er img {
+    width: 30%;
+    height: 30%;
+  }
   .drink-mobile2 img {
     width: 70% !important;
   }

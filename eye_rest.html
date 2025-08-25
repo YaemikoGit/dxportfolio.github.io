@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#1843c1" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#1843c1">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>DaiXuan's Portfolio</title>
+</head>
+<body>
+    <header class="py-0">
+        <div id="nav-placeholder"></div>
+    </header>
+
+    <!-- Intro -->
+    <section class="intro">
+        <div class="container">
+            <div class="inner-wrapper">
+                <h3 class="mt-3">Eye Rest</h3>
+                <div class="projectBox d-lg-flex justify-content-around background-light mt-lg-4 p-md-3">
+                    <img class="my-4 ml-lg-4" src="assets/Sentosa.png" width="380" height="240" alt="sentosa">
+                    <div class="mt-lg-5 mx-2 px-xl-5">
+                        <h4>Project Brief</h4>
+                        <p class="text-dark lh-sm">Eye Rest is an Android mobile application designed to combat digital eye strain by encouraging users to take regular breaks 
+                            and perform simple eye exercises done with a team. 
+                            It helps users monitor their habits and provides insights to promote better eye health.
+                        </p>
+                    
+                        <h6 class="pt-3 fw-bold">Skill</h6>
+                        <p class="text-dark">
+                            Mobile Application Development, Android Development, Kotlin, Jetpack Compose
+                        </p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- challenge/result -->
+    <article class="about pt-md-5 pt-sm-4 pb-4">
+        <div class="container text-light">
+            <div class="inner-wrapper justify-content-center align-items-center">
+                <h4>Challenges</h4>
+                <p class="my-3">Integrating Google MediaPipe to allow monitoring of eye blinks and rolls and provide appropriate insights to promote better eye health. Additionally, the team has included an alarm feature which has encountered a few logic difficulties due to the development in Android Studio</p>
+
+                <h4 class="mt-4">Results</h4>
+                <p class="my-3">EyeRest is able to detect any person’s eyes, and track the number of blinks and rolls in a simple eye exercise with a few modifications to the Google MediaPipe integration. 
+                    Alarm can be snoozed and timer will increase the snooze counter for statistics purposes to alert users the amount of times they snoozed their alarms and the longer their eyes will strain.</p>
+            </div>
+        </div>
+    </article>
+
+    <!-- Highlight -->
+    <section class="moreInfo">
+        <div class="container">
+            <h3 class="text-center">Highlights</h3>
+
+            <div class="align-items-center">
+                <h4 class="my-3">Key Features</h4>
+
+                <div class="er">
+                    <img class="" src="assets/eyeRest/guided_eye.png" width="80%" alt="guided eye exercise - prev">
+                </div>
+            </div>
+
+            <br>
+
+            <div class="d-lg-flex boxSpacing align-items-center">
+                <img class="mx-md-4 shadow-box-left" src="assets/sentosaSS1.png" width="700" height="340" alt="sentosa account page">
+                <p class="mx-md-5 pl-lg-4 mt-md-5 text-dark">The website has an “Account” page which lists down each order with date of purchase, order status and the option to cancel order. The list of orders can be sorted out according to alphabetical, date and order status.</p>
+            </div>
+            
+            
+            
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script>
+        // to load nav
+        fetch("nav.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("nav-placeholder").innerHTML = data);
+
+        // to load footer
+        fetch("footer.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+        </script>
+
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>

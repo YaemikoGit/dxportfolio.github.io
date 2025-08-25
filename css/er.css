@@ -1,36 +1,68 @@
 /* The modal (hidden by default) */
   .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1000; 
-    padding-top: 80px; 
-    left: 0; top: 0;
-    width: 100%; height: 100%; 
-    background: rgba(0,0,0,0.7); 
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; 
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    overflow: auto;
+    padding: 10px;
   }
 
-  /* Modal content (image + caption) */
-  .modal-content {
-    margin: auto;
-    display: block;
-    max-width: 80%;
+  /* Modal box */
+  .modal-box {
+    background: #FFFBF6;
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 900px;
     border-radius: 8px;
+    position: relative;
   }
+
+  .modal-content-flex {
+    display: flex;
+    align-items: center;
+    /* gap: 20px; */
+    padding: 0 auto;
+  }
+
+  .modal-left {
+    text-align: center;
+  }
+
+  .modal-left img {
+    border-radius: 6px;
+    padding: 20px 0px;
+  }
+
+  .modal-right {
+    flex: 1;
+    text-align: center;
+    padding-right: 20px;
+  }
+  
+  .modal-right h5 {
+    text-transform: none;
+  }
+  
 
   /* Caption text */
   #caption {
     margin: 15px auto;
-    text-align: center;
-    color: #f1f1f1;
+    color: #000000;
     font-size: 18px;
   }
 
   /* Close button */
   .close {
     position: absolute;
-    top: 20px;
-    right: 40px;
-    color: white;
+    top: 5px;
+    right: 16px;
+    color: black;
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;

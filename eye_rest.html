@@ -19,6 +19,9 @@
                 width: 85%;
                 height: 85%;
             }
+            .modal-left img {
+                width: 80%;
+            }
         }
     </style>
 </head>
@@ -72,23 +75,43 @@
             <h3 class="text-center">Highlights</h3>
 
             <h4 class="my-3">Key Features</h4>
+            <p class="text-dark">Insert description TBC</p>
             <div class="d-flex align-items-center">
                 <div class="er">
-                    <img class="" src="assets/eyeRest/guided_eye.png" alt="guided eye exercise - prev">
+                    <img class="" src="assets/eyeRest/guided_eye.png" 
+                    data-full="assets/eyeRest/guided_eye_full.png" alt="Guided Eye Exercise"
+                    data-caption="Follow along with exercises designed to relax and strengthen eye muscles.">
                 </div>
 
-                <!-- The Modal -->
-                <div id="imgModal" class="modal">
+                <div class="er">
+                    <img class="" src="assets/eyeRest/eye_activity.png" alt="Eye Activity Tracker (via Camera)"
+                    data-full="assets/eyeRest/activity_full.png"
+                    data-caption="Utilizes Google MediaPipe Face Landmarker to monitor eye movements (like blinks and rolls) during exercises, providing feedback on activity.">
+                </div>
+                <div class="er">
+                    <img class="" src="assets/eyeRest/usage_insights.png" alt="Usage Insights"
+                    data-full="assets/eyeRest/insight_full.png"
+                    data-caption="View statistics on your eye exercise activity (like blink counts and eye rolls) to understand your patterns.">
+                </div>
+            </div>
+
+            <!-- Modals used for key features -->
+            <div id="imgModal" class="modal">
+                <div class="modal-box">
                     <span class="close">&times;</span>
-                    <img class="modal-content" id="fullImg">
-                    <div id="caption"></div>
-                </div>
 
-                <div class="er">
-                    <img class="" src="assets/eyeRest/eye_activity.png" alt="guided eye exercise - prev">
-                </div>
-                <div class="er">
-                    <img class="" src="assets/eyeRest/usage_insights.png" alt="guided eye exercise - prev">
+                    <div class="modal-content-flex">
+                        <!-- image -->
+                        <div class="modal-left">
+                            <img id="fullImg">
+                        </div>
+
+                        <!-- Text -->
+                        <div class="modal-right">
+                            <h4 id="modalTitle"></h4>
+                            <p id="caption"></p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -119,30 +142,30 @@
         .then(data => document.getElementById("footer-placeholder").innerHTML = data);
 
 
-        // Get modal elements
-        var modal = document.getElementById("imgModal");
-        var preview = document.getElementById("previewImg");
-        var fullImg = document.getElementById("fullImg");
-        var captionText = document.getElementById("caption");
-        var closeBtn = document.getElementsByClassName("close")[0];
+        let modal = document.getElementById("imgModal");
+        let fullImg = document.getElementById("fullImg");
+        let captionText = document.getElementById("caption");
+        let title = document.getElementById("modalTitle");
+        let closeBtn = document.getElementsByClassName("close")[0];
 
-        // When user clicks preview image
-        preview.onclick = function() {
+        // Get all preview images
+        let previews = document.querySelectorAll(".er img");
+
+        previews.forEach(img => {
+            img.onclick = function() {
             modal.style.display = "block";
-            fullImg.src = this.src;              // use same image, or replace with high-res version
-            captionText.innerHTML = "Guided Eye Exercise - Helps relax your vision with step-by-step guidance."; 
-        }
+            fullImg.src = this.dataset.full;  // show full image
+            captionText.innerHTML = this.dataset.caption; // data caption
+            title.innerHTML = this.alt; // title from alt
+            }
+        });
 
-        // When user clicks X, close modal
+        // Close modal
         closeBtn.onclick = function() {
             modal.style.display = "none";
         }
-
-        // Close if user clicks outside the image
-        window.onclick = function(event) {
-            if (event.target == modal) {
-            modal.style.display = "none";
-            }
+        window.onclick = function(e) {
+            if (e.target == modal) modal.style.display = "none";
         }
     </script>
 

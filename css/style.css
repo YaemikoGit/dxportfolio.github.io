@@ -362,6 +362,8 @@ textarea {
   margin-bottom: 150px;
 }
 
+
+/* media screen */
 @media screen and (max-width: 576px) {
   .inner-wrapper {
     padding: 0;
@@ -511,6 +513,7 @@ textarea {
     width: 65% !important;
   }
 }
+
 @media screen and (min-width: 768px) {
   ul {
     text-align: left;
@@ -580,6 +583,7 @@ textarea {
     width: 80% !important;
   }
 }
+
 @media screen and (min-width: 992px) {
   .social-media {
     justify-content: start;

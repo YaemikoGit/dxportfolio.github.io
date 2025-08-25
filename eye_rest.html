@@ -9,8 +9,18 @@
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/er.css">
     
     <title>DaiXuan's Portfolio</title>
+    <style>
+        @media screen and (min-width: 992px) {
+            /* to note */
+            .moreInfo .er img {
+                width: 85%;
+                height: 85%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="py-0">
@@ -47,7 +57,7 @@
         <div class="container text-light">
             <div class="inner-wrapper justify-content-center align-items-center">
                 <h4>Challenges</h4>
-                <p class="my-3">Integrating Google MediaPipe to allow monitoring of eye blinks and rolls and provide appropriate insights to promote better eye health. Additionally, the team has included an alarm feature which has encountered a few logic difficulties due to the development in Android Studio</p>
+                <p class="my-3">Integrating Google MediaPipe to allow monitoring of eye blinks and rolls and provide appropriate insights to promote better eye health. Additionally, the team has included an alarm feature which has encountered a few logic difficulties due to the development in Android Studio.</p>
 
                 <h4 class="mt-4">Results</h4>
                 <p class="my-3">EyeRest is able to detect any person’s eyes, and track the number of blinks and rolls in a simple eye exercise with a few modifications to the Google MediaPipe integration. 
@@ -62,9 +72,15 @@
             <h3 class="text-center">Highlights</h3>
 
             <h4 class="my-3">Key Features</h4>
-            <div class="align-items-center">
+            <div class="d-flex align-items-center">
                 <div class="er">
-                    <img class="" src="assets/eyeRest/guided_eye.png" width="80%" alt="guided eye exercise - prev">
+                    <img class="" src="assets/eyeRest/guided_eye.png" alt="guided eye exercise - prev">
+                </div>
+                <div class="er">
+                    <img class="" src="assets/eyeRest/eye_activity.png" alt="guided eye exercise - prev">
+                </div>
+                <div class="er">
+                    <img class="" src="assets/eyeRest/usage_insights.png" alt="guided eye exercise - prev">
                 </div>
             </div>
 
@@ -93,7 +109,34 @@
         fetch("footer.html")
         .then(res => res.text())
         .then(data => document.getElementById("footer-placeholder").innerHTML = data);
-        </script>
+
+
+        // Get modal elements
+        var modal = document.getElementById("imgModal");
+        var preview = document.getElementById("previewImg");
+        var fullImg = document.getElementById("fullImg");
+        var captionText = document.getElementById("caption");
+        var closeBtn = document.getElementsByClassName("close")[0];
+
+        // When user clicks preview image
+        preview.onclick = function() {
+            modal.style.display = "block";
+            fullImg.src = this.src;              // use same image, or replace with high-res version
+            captionText.innerHTML = "Guided Eye Exercise - Helps relax your vision with step-by-step guidance."; 
+        }
+
+        // When user clicks X, close modal
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close if user clicks outside the image
+        window.onclick = function(event) {
+            if (event.target == modal) {
+            modal.style.display = "none";
+            }
+        }
+    </script>
 
         <script src="/js/jquery.min.js"></script>
         <script src="/js/popper.min.js"></script>

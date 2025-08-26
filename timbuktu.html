@@ -139,7 +139,7 @@
     </section>
 
 
-    <footer>
+    <!-- <footer>
         <div class="flex-footer">
             <div class="container">
                 <div class="row pt-3">
@@ -170,7 +170,20 @@
             </div>
                 
         </div>
-    </footer>
+    </footer> -->
+
+    <div id="footer-placeholder"></div>
+    <script>
+        // to load nav
+        fetch("nav.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("nav-placeholder").innerHTML = data);
+
+        // to load footer
+        fetch("footer.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+    </script>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.min.js"></script>

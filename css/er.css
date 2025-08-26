@@ -81,10 +81,10 @@
 }
 
 /* Small hover zoom on preview images */
-.er img {
+.er img, .arch img{
   cursor: pointer;
   transition: transform 0.2s;
 }
-.er img:hover {
+.er img:hover, .arch img:hover {
   transform: scale(1.05);
 }

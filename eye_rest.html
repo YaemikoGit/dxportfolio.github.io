@@ -121,12 +121,31 @@
             <br>
 
             <h4 class="my-5">Architecture</h4>
-            <div class="d-lg-flex boxSpacing align-items-center">
+            <div class="d-lg-flex boxSpacing align-items-center arch">
                 
                 <img id="arch_img" class="mx-md-4 shadow-box-left" src="assets/eyeRest/KirbyMart_system.png" 
                 alt="System Architecture">
-                <p class="mx-md-5 pl-lg-4 mt-md-5 text-dark">The system follows a mobile-based architecture integrating AI processing with cloud data storage. </p>
-            </div>
+
+                <div> 
+                    <p class="mx-md-5 pl-lg-4 mt-md-5 text-dark">The system follows a mobile-based architecture integrating AI processing with cloud data storage. </p>
+                    <!-- collapse info -->
+                    <div>
+                        <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+                        <div class="row">
+                            <div class="col">
+                                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                <div class="card card-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+                
+            
+                
             
             <!-- Modals used for arch -->
             <div id="imgModal-arch" class="modal">
@@ -211,7 +230,7 @@
             modal_arch.style.display = "none";
         }
         window.onclick = function(e) {
-            if (e.target == modal) modal.style.display = "none";
+            if (e.target == modal_arch) modal_arch.style.display = "none";
         }
 
 

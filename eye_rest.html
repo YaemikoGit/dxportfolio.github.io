@@ -46,7 +46,7 @@
                     
                         <h6 class="pt-3 fw-bold">Skill</h6>
                         <p class="text-dark">
-                            Mobile Application Development, Android Development, Kotlin, Jetpack Compose
+                            Mobile Application Development, Android Development <br> (Kotlin, Jetpack Compose)
                         </p>
                         <hr>
                     </div>
@@ -123,10 +123,30 @@
             <h4 class="my-5">Architecture</h4>
             <div class="d-lg-flex boxSpacing align-items-center">
                 
-                <img class="mx-md-4 shadow-box-left" src="assets/eyeRest/KirbyMart_system.png" width="700" height="340" alt="sentosa account page">
+                <img id="arch_img" class="mx-md-4 shadow-box-left" src="assets/eyeRest/KirbyMart_system.png" 
+                width="700" height="340" alt="System Architecture">
                 <p class="mx-md-5 pl-lg-4 mt-md-5 text-dark">The system follows a mobile-based architecture integrating AI processing with cloud data storage. </p>
             </div>
             
+            <!-- Modals used for arch -->
+            <div id="imgModal-arch" class="modal">
+                <div class="modal-box arch-box">
+                    <span class="closeBtn_arch">&times;</span>
+
+                    <!-- image -->
+                        <div class="modal-left">
+                            <img id="full_arch_img">
+                        </div>
+
+                        <!-- Text -->
+                        <div class="modal-right">
+                            <h4 id="arch-title"></h4>
+                        </div>
+                    <!-- <div class="modal-content my-5">
+                        
+                    </div> -->
+                </div>
+            </div>
             
             
         </div>
@@ -145,7 +165,7 @@
         .then(res => res.text())
         .then(data => document.getElementById("footer-placeholder").innerHTML = data);
 
-
+        // load modal for key features
         let modal = document.getElementById("imgModal");
         let fullImg = document.getElementById("fullImg");
         let captionText = document.getElementById("caption");
@@ -171,6 +191,30 @@
         window.onclick = function(e) {
             if (e.target == modal) modal.style.display = "none";
         }
+
+
+        //load modal for arch system
+        let modal_arch = document.getElementById("imgModal-arch");
+        let arch_img = document.getElementById("arch_img");
+        let full_arch_img = document.getElementById("full_arch_img");
+        let arch_title = document.getElementById("arch-title");
+        let closeBtn_arch = document.getElementsByClassName("closeBtn_arch")[0];
+
+        arch_img.onclick = function() {
+            modal_arch.style.display = "block";
+            full_arch_img.src = this.src;  // show full image
+            arch_title.innerHTML = this.alt; // title from alt
+        }
+
+        // Close modal
+        closeBtn_arch.onclick = function() {
+            modal_arch.style.display = "none";
+        }
+        window.onclick = function(e) {
+            if (e.target == modal) modal.style.display = "none";
+        }
+
+
     </script>
 
     <script src="js/bootstrap.bundle.min.js"></script>

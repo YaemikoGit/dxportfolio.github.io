@@ -68,7 +68,6 @@
 
 
 
-
 /* Close button */
 .close, .closeBtn_arch {
   position: absolute;
@@ -87,4 +86,31 @@
 }
 .er img:hover, .arch img:hover {
   transform: scale(1.05);
+}
+
+
+
+/* #demo {
+  position: absolute;
+  left: 54%;
+  z-index: 1050;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  width: 500px;
+} */
+
+
+.arch-desc p {
+  color:#000000;
+}
+
+.arch-brief {
+  width: 550px;
+}
+
+#demo {
+  width: 550px;
+  padding: 1rem;
+  background: white;
 }

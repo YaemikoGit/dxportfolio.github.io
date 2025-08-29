@@ -1,0 +1,72 @@
+
+.image-wrapper {
+  position: relative;
+  display: inline-block; /* shrink-wrap to the image size */
+  align-items: center;
+  width: 50%;
+}
+
+.image-wrapper img {
+  display: block; /* removes inline gap under image */
+  max-width: 100%; /* responsive */
+  height: auto;
+}
+
+.image-wrapper .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.6)
+  );
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-wrapper:hover .overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+
+/* Close button */
+.close, .closeBtn_arch {
+  position: absolute;
+  top: 5px;
+  right: 16px;
+  color: black;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Small hover zoom on preview images */
+.er img, .arch img{
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.er img:hover, .arch img:hover {
+  transform: scale(1.05);
+}
+
+
+.arch-desc p {
+  color:#000000;
+}
+
+.arch-brief {
+  width: 550px;
+}
+
+#demo {
+  width: 550px;
+  padding: 1rem;
+  background: white;
+}
